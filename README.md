@@ -1,99 +1,47 @@
-# Sales Prediction — Linear Regression
+# Omnichannel Sales Forecasting ML
 
-Predicting product sales from advertising spend (TV, Radio, Newspaper) using Ordinary Least Squares Linear Regression. The project covers the full pipeline: data exploration, model training, metric evaluation, and diagnostic visualizations.
+An end-to-end Machine Learning pipeline that uses **Linear Regression** to predict retail sales based on omnichannel advertising spend (TV, Radio, Newspaper). Built entirely in Python.
 
-![Python](https://img.shields.io/badge/Python-3.10-blue?style=flat-square&logo=python)
-![scikit-learn](https://img.shields.io/badge/scikit--learn-1.4-F7931E?style=flat-square&logo=scikit-learn&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-2.0-150458?style=flat-square&logo=pandas)
-![Matplotlib](https://img.shields.io/badge/Matplotlib-3.8-informational?style=flat-square)
+Un pipeline de Machine Learning de extremo a extremo que usa **Regresion Lineal** para predecir ventas minoristas basadas en el gasto en publicidad omnicanal. Construido enteramente en Python.
 
 ---
 
-## Problem Statement
+<p align="center">
+  <img src="https://raw.githubusercontent.com/JulianDataScienceExplorerV2/Omnichannel-Sales-Forecasting-ML/main/assets/sales_forecasting.png" alt="Sales Regression Plot" width="800"/>
+</p>
 
-A company runs advertising campaigns across three channels — TV, Radio, and Newspaper — and wants to understand how each channel influences sales. This model quantifies those relationships and produces sales predictions given a budget allocation.
+## Tech Stack / Stack Tecnologico
+- **Language**: Python 3.12+
+- **Machine Learning**: `scikit-learn`
+- **Data Manipulation**: `pandas`, `numpy`
+- **Visualization**: `matplotlib`, `seaborn`
 
----
+## The Problem (Business Context) / El Problema
+How do we allocate the marketing budget? This model analyzes historical data to quantify the exact return on investment (ROI) for each advertising channel, allowing the business to forecast total sales based on future ad spend.
 
-## Dataset
+¿Como asignamos el presupuesto de marketing? Este modelo analiza datos historicos para cuantificar el retorno de inversion (ROI) exacto para cada canal publicitario, permitiendo escalar las ventas futuras de acuerdo a la inversion en medios.
 
-**Source:** [Advertising dataset](https://raw.githubusercontent.com/amankharwal/Website-data/master/advertising.csv)
-
-| Column | Description |
-|--------|-------------|
-| `TV` | Budget spent on TV advertising (thousands USD) |
-| `Radio` | Budget spent on Radio advertising (thousands USD) |
-| `Newspaper` | Budget spent on Newspaper advertising (thousands USD) |
-| `Sales` | Units sold (thousands) — target variable |
-
----
-
-## Model Performance
-
-| Metric | Value |
-|--------|-------|
-| R-squared (R²) | ~0.90 |
-| Mean Absolute Error (MAE) | ~1.05 |
-| Root Mean Squared Error (RMSE) | ~1.40 |
-
-The model explains approximately **90% of the variance** in sales, indicating a strong linear relationship between advertising spend and sales volume.
-
----
-
-## Project Structure
-
-```
-Sales-Prediction-LinearRegression/
-└── Analisis de ventas con sklearn.py   # Full analysis script
-```
-
----
-
-## Analysis Pipeline
-
-1. **Data loading** — read CSV from remote URL
-2. **Exploratory summary** — shape, head, descriptive statistics
-3. **Train/test split** — 80/20 with fixed random state
-4. **Model training** — `sklearn.linear_model.LinearRegression`
-5. **Evaluation** — R², MAE, RMSE
-6. **Coefficient analysis** — feature importance by coefficient magnitude
-7. **Diagnostic plots** — Actual vs Predicted, Residuals, Residual Distribution, Coefficient Bar Chart
-
----
-
-## Tech Stack
-
-| Library | Purpose |
-|---------|---------|
-| `pandas` | Data loading and exploration |
-| `scikit-learn` | Model training and evaluation |
-| `numpy` | Numerical computations |
-| `matplotlib` | Diagnostic visualizations |
-
----
-
-## How to Run
+## How to Run / Como Ejecutar
 
 ```bash
-git clone https://github.com/JulianDataScienceExplorerV2/Sales-Prediction-LinearRegression.git
-cd Sales-Prediction-LinearRegression
+# Clone the repository
+git clone https://github.com/JulianDataScienceExplorerV2/Omnichannel-Sales-Forecasting-ML.git
+cd Omnichannel-Sales-Forecasting-ML
 
-pip install pandas scikit-learn numpy matplotlib
+# Install requirements
+pip install -r requirements.txt
 
+# Run the model
 python "Analisis de ventas con sklearn.py"
 ```
 
----
-
-## Key Insight
-
-TV advertising has the strongest positive coefficient, making it the most impactful channel for driving sales. Newspaper spend shows minimal marginal contribution, suggesting budget reallocation toward TV and Radio would improve ROI.
+## Key Insights / Hallazgos Clave
+- **TV Spend** is the strongest predictor of total sales volume.
+- The Linear Regression model correctly captures the relationship with a high R-Squared ($R^2$) value.
 
 ---
 
-## Author
-
-**Julian David Urrego** — Data Analyst
-Python · Scikit-learn · Pandas · Statistical Modeling
-
-[![GitHub](https://img.shields.io/badge/GitHub-JulianDataScienceExplorerV2-181717?style=flat-square&logo=github)](https://github.com/JulianDataScienceExplorerV2)
+<div align="center">
+Made by <b>Julian David Urrego Lancheros</b> <br>
+<i>Data Analyst & Marketing Science Specialist</i>
+</div>
